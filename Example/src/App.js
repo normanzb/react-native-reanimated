@@ -26,10 +26,15 @@ import ScrollToExample from './ScrollToExample';
 import AnimatedTabBarExample from './AnimatedTabBarExample';
 import LightboxExample from './LightboxExample';
 import LiquidSwipe from './LiquidSwipe';
+import CallTest from './CallTest';
 
 YellowBox.ignoreWarnings(['Calling `getNode()`']);
 
 const SCREENS = {
+  CallTest: {
+    screen: CallTest,
+    title: 'Call() test',
+  },
   AnimatedStyleUpdate: {
     screen: AnimatedStyleUpdateExample,
     title: '🆕 Animated Style Update',
