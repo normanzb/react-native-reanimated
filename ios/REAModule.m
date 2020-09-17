@@ -64,10 +64,13 @@ RCT_EXPORT_METHOD(createNode:(nonnull NSNumber *)nodeID
   }];
 }
 
-RCT_EXPORT_METHOD(dropNode:(nonnull NSNumber *)nodeID)
+RCT_EXPORT_METHOD(dropNode:(nonnull NSNumber *)nodeID 
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject)
 {
   [self addOperationBlock:^(REANodesManager *nodesManager) {
     [nodesManager dropNode:nodeID];
+    resolve(@YES);
   }];
 }
 
